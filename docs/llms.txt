@@ -14,7 +14,8 @@ Mods are Claude Code plugins whose JavaScript or TypeScript hooks run inside a s
 
 ## Topics
 
-- [Prompt cache mods](https://mods.aidojo.si/topics/prompt-cache/): 263 mods that show the cache timer, keep it warm or warn before a cold send.
+- [Prompt cache mods for Claude Code](https://mods.aidojo.si/topics/prompt-cache/): 263 mods that show the cache timer, keep it warm or warn before a cold send.
+- [Context and usage meters for Claude Code](https://mods.aidojo.si/topics/usage-meters/): 889 mods that show context fill, token use, plan limits or estimated cost, or warn before a limit.
 
 ## Ask Claude to find a mod
 
