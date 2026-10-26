@@ -15,7 +15,7 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/IT-BAER/claude-forge">IT-BAER/claude-forge</a></p>
 <p class="lede">Frees the memory of idle Claude Code sessions (desktop app, VS Code, CLI) by stopping their process trees (desktop sessions stay in the sidebar), optionally archives desktop sessions, and stops idle process trees left behind by ended sessions</p>
 
-<section class="summary" aria-label="Scan summary"><p class="summary-line">session-reaper reaches L3 (network) and passed <code>claude plugin validate</code> with warnings on Claude Code 2.1.310.</p><ul><li>Events hooked: 4</li><li>API methods referenced: 10</li><li>Access from classified calls: L3, network: MCP servers, runs processes, persists state, draws</li><li>Static scan, not a runtime test</li></ul></section>
+<section class="summary" aria-label="Scan summary"><p class="summary-line">session-reaper reaches L3 (network) and passed <code>claude plugin validate</code> with warnings on Claude Code 2.1.310.</p><ul><li>Events hooked: 3</li><li>API methods referenced: 10</li><li>Access from classified calls: L3, network: MCP servers, runs processes, persists state, draws</li><li>Static scan, not a runtime test</li></ul></section>
 <section class="install-hint" aria-labelledby="install-title"><h2 id="install-title">Install hint</h2><div class="command"><pre><code>/plugin install session-reaper --marketplace IT-BAER/claude-forge</code></pre><button type="button" class="copy" data-copy hidden>Copy</button></div><p>From the repository's own marketplace. Confirm the plugin name in the repository's README before installing. Mods need Claude Code 2.1.287 or later.</p></section><script>for(const b of document.querySelectorAll('[data-copy]')){b.hidden=false;b.onclick=()=>{const code=b.previousElementSibling,select=()=>{getSelection().selectAllChildren(code);b.textContent='Selected'};try{navigator.clipboard.writeText(code.textContent).then(()=>{b.textContent='Copied'},select)}catch{select()}}}</script>
 <div class="facts"><div><h2>Access</h2><span class="level">L3 Uses the network</span><span class="track" aria-label="Reach level 3: Uses the network"><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i><i class="on l3"></i></span><span class="labels">MCP servers, runs processes, persists state, draws</span></div>
 <div><h2>Validation</h2><span class="status">Passed with warnings on Claude Code 2.1.310</span></div></div>
@@ -23,15 +23,15 @@
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>classic hooks</dd>
-    <dt>Hooks</dt><dd><code>session.start, turn.start, turn.complete, classic.Stop</code></dd>
+    <dt>Observed events</dt><dd>Only what it hooks</dd>
+    <dt>Hooks</dt><dd><code>session.start, turn.start, turn.complete</code></dd>
     <dt>API calls</dt><dd><code>$.clock.every, $.clock.now, $.mcp.call, $.process.run, $.session.id, $.store.delete, $.store.get, $.store.keys, $.store.set, $.ui.log</code></dd>
 
     <dt>Validation on 2.1.310</dt><dd>Passed with warnings</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/IT-BAER/claude-forge/tree/c14b7cb8f4e44e0193c9259f461cd954ca82a036"><code>c14b7cb8f4e4</code></a></dd>
-    <dt>Marketplace warnings</dt><dd><a href="https://github.com/IT-BAER/claude-forge/blob/c14b7cb8f4e44e0193c9259f461cd954ca82a036/.claude-plugin/marketplace.json">claude-forge</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/IT-BAER/claude-forge/tree/ef89440bb13479825a84841410c8b42418df1816"><code>ef89440bb134</code></a></dd>
+    <dt>Marketplace warnings</dt><dd><a href="https://github.com/IT-BAER/claude-forge/blob/ef89440bb13479825a84841410c8b42418df1816/.claude-plugin/marketplace.json">claude-forge</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="/access/">What a mod can access and how the scan works</a>.</p></section>
 <section class="siblings" aria-labelledby="siblings-title"><h2 id="siblings-title">More from IT-BAER/claude-forge</h2><ul><li><a href="/mods/IT-BAER--claude-forge--file-explorer/">file-explorer</a><span>VS Code style file tree of the session's working directory in a pane</span></li><li><a href="/mods/IT-BAER--claude-forge--prompt-templates/">prompt-templates</a><span>Prompt template library in a pane: search, tags, {{variables}}, fill, insert, send or copy; /prompts</span></li><li><a href="/mods/IT-BAER--claude-forge--session-band/">session-band</a><span>Prompt cache status band (c / ctx / rwc / sc / plan limits) with hover help, cold-send guard, keep-warm, /boa…</span></li></ul></section>
 <section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/IT-BAER--claude-forge--session-reaper-reach.svg" alt="Reach badge for session-reaper"> <img src="/badges/IT-BAER--claude-forge--session-reaper-validates.svg" alt="Validation badge for session-reaper"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/IT-BAER--claude-forge--session-reaper-reach.svg)](https://mods.aidojo.si/mods/IT-BAER--claude-forge--session-reaper/)

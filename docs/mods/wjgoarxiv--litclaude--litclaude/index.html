@@ -15,7 +15,7 @@
 <p class="byline">A Claude Code mod in <a href="https://github.com/wjgoarxiv/litclaude">wjgoarxiv/litclaude</a></p>
 <p class="lede">Claude Code-native workflow plugin with a bounded-authority start-work lifecycle.</p>
 
-<section class="summary" aria-label="Scan summary"><p class="summary-line">litclaude reaches L1 (reads) and passed <code>claude plugin validate</code> on Claude Code 2.1.310.</p><ul><li>Events hooked: 13</li><li>API methods referenced: 19</li><li>Access from classified calls: L1, reads: reads files, reads env vars, reads settings, draws</li><li>Static scan, not a runtime test</li></ul></section>
+<section class="summary" aria-label="Scan summary"><p class="summary-line">litclaude reaches L1 (reads) and passed <code>claude plugin validate</code> on Claude Code 2.1.310.</p><ul><li>Events hooked: 14</li><li>API methods referenced: 19</li><li>Access from classified calls: L1, reads: reads files, reads env vars, reads settings, draws</li><li>Static scan, not a runtime test</li></ul></section>
 <section class="install-hint" aria-labelledby="install-title"><h2 id="install-title">Install hint</h2><div class="command"><pre><code>/plugin install litclaude --marketplace wjgoarxiv/litclaude</code></pre><button type="button" class="copy" data-copy hidden>Copy</button></div><p>From the repository's own marketplace. Confirm the plugin name in the repository's README before installing. Mods need Claude Code 2.1.287 or later.</p></section><script>for(const b of document.querySelectorAll('[data-copy]')){b.hidden=false;b.onclick=()=>{const code=b.previousElementSibling,select=()=>{getSelection().selectAllChildren(code);b.textContent='Selected'};try{navigator.clipboard.writeText(code.textContent).then(()=>{b.textContent='Copied'},select)}catch{select()}}}</script>
 <div class="facts"><div><h2>Access</h2><span class="level">L1 Reads</span><span class="track" aria-label="Reach level 1: Reads"><i class="on l1"></i><i class="on l1"></i><i class=""></i><i class=""></i></span><span class="labels">reads files, reads env vars, reads settings, draws</span></div>
 <div><h2>Validation</h2><span class="status">Passed on Claude Code 2.1.310</span></div></div>
@@ -23,15 +23,15 @@
 <section class="record" aria-labelledby="record-title"><h2 id="record-title">What the scan recorded</h2>
 <dl>
 
-    <dt>Observed events</dt><dd>every tool call, subagent spawns, every skill</dd>
-    <dt>Hooks</dt><dd><code>session.start, turn.start, turn.complete, session.measure, tool.call, turn.step, agent.spawn, skill.prompt, session.detach, ui.fault, ui.render {component=AbovePrompt}, ui.render {component=Spinner}, command.run {command=lit-evidence}, ui.close, ui.render {component=Pane, requestId=lit-evidence}</code></dd>
+    <dt>Observed events</dt><dd>every tool call, every prompt, subagent spawns, every skill</dd>
+    <dt>Hooks</dt><dd><code>session.start, turn.start, turn.complete, session.measure, tool.call, prompt.submit, turn.step, agent.spawn, skill.prompt, session.detach, ui.fault, ui.render {component=AbovePrompt}, ui.render {component=Spinner}, command.run {command=lit-evidence}, ui.close, ui.render {component=Pane, requestId=lit-evidence}</code></dd>
     <dt>API calls</dt><dd><code>$.agent.list, $.clock.after, $.clock.every, $.clock.now, $.command.register, $.env.get, $.fs.list, $.fs.read, $.fs.stat, $.session.cwd, $.session.id, $.session.surfaces, $.session.usage, $.settings.read, $.ui.invalidate, $.ui.notify, $.ui.open, $.ui.resolve, $.ui.toast</code></dd>
     <dt>Surface modules</dt><dd><code>hooks/lit-band-client.mjs</code></dd>
     <dt>Validation on 2.1.310</dt><dd>Passed</dd>
 
 
-    <dt>Scanned revision</dt><dd><a href="https://github.com/wjgoarxiv/litclaude/tree/2c081fdb9afb0a95728dd22c7bb4082372c04c60"><code>2c081fdb9afb</code></a></dd>
-    <dt>Marketplace passed</dt><dd><a href="https://github.com/wjgoarxiv/litclaude/blob/2c081fdb9afb0a95728dd22c7bb4082372c04c60/.claude-plugin/marketplace.json">litclaude-ai</a></dd></dl>
+    <dt>Scanned revision</dt><dd><a href="https://github.com/wjgoarxiv/litclaude/tree/fb7237fe26482250d2eecd06ef992ba83a2b778b"><code>fb7237fe2648</code></a></dd>
+    <dt>Marketplace passed</dt><dd><a href="https://github.com/wjgoarxiv/litclaude/blob/fb7237fe26482250d2eecd06ef992ba83a2b778b/.claude-plugin/marketplace.json">litclaude-ai</a></dd></dl>
 <p class="note">These are the hooks and API calls reported by <code>claude plugin validate</code>. Access levels describe the widest reach of those calls and are not safety ratings. Validation is a static check, not a runtime test, and a passing result does not prove that a mod works or is safe. <a href="/access/">What a mod can access and how the scan works</a>.</p></section>
 
 <section class="badge-snippet" aria-labelledby="badge-title"><h2 id="badge-title">Badge for your README</h2><p><img src="/badges/wjgoarxiv--litclaude--litclaude-reach.svg" alt="Reach badge for litclaude"> <img src="/badges/wjgoarxiv--litclaude--litclaude-validates.svg" alt="Validation badge for litclaude"></p><p>Authors can show the latest scan result in their README. Each badge links to this page.</p><pre><code>[![reach](https://raw.githubusercontent.com/karanb192/awesome-claude-code-mods/main/badges/wjgoarxiv--litclaude--litclaude-reach.svg)](https://mods.aidojo.si/mods/wjgoarxiv--litclaude--litclaude/)
